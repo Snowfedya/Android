@@ -1,27 +1,31 @@
-# Setup Lab Environment Strategy for Gemini
+# Setup Lab Environment Strategy
 
 ## Objective
-Initialize a specific lab environment by branching from the previous state and configuring the necessary project files.
+Initialize a new lab environment respecting the **cumulative directory structure**.
 
-## Steps to Execute:
-1.  **Branch Creation**:
-    *   Check if `lab-<number>` branch exists.
-    *   If not, create it from `lab-<number-1>` (or `main` for Lab 1).
-    *   Command: `git checkout -b lab-<number> <base_branch>`
+## Algorithm for Agent
 
-2.  **Code Migration**:
-    *   If base code is missing, copy from `lab-<number-1>`.
-    *   Ensure `AndroidManifest.xml` reflects the correct activities/permissions for the specific lab.
+1.  **Identify Context**:
+    *   Current Lab: `N` (e.g., 3)
+    *   Target Lab: `N+1` (e.g., 4)
 
-3.  **Dependency Management**:
-    *   Read `build.gradle.kts` (or `build.gradle`).
-    *   Add lab-specific dependencies (e.g., Retrofit for Lab 5, Room for Lab 7).
-    *   Remove dependencies strictly forbidden in this lab (e.g., remove Navigation Component in Lab 1).
+2.  **Git Operations**:
+    *   `git checkout lab-<N>`
+    *   `git checkout -b lab-<N+1>`
 
-4.  **Documentation**:
-    *   Create/Update `README.md` in the root of the lab branch.
-    *   List specific requirements implemented in this lab.
+3.  **FileSystem Operations**:
+    *   *Critical Step*: Copy the previous lab's project to a new folder.
+    *   Command: `cp -r lab-<N> lab-<N+1>`
+    *   *Clean up*: Delete `build/` and `.gradle/` folders inside the new `lab-<N+1>` directory to avoid cache conflicts.
 
-5.  **Commit**:
-    *   Stage changes: `git add .`
-    *   Commit: `git commit -m "chore: setup lab-<number> environment"`
+4.  **Configuration**:
+    *   Update `lab-<N+1>/app/build.gradle` to add new dependencies required for Lab `N+1` (e.g., Navigation Component).
+    *   Remove forbidden technologies if any "future code" accidentally leaked in.
+
+5.  **Documentation**:
+    *   Update root `tasks.md` marking the new lab as "In Progress".
+    *   Update root `README.md` marking the new lab status.
+
+6.  **Commit**:
+    *   `git add .`
+    *   `git commit -m "chore: setup structure for lab-<N+1>"`
