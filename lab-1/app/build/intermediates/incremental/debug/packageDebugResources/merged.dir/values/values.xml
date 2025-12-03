@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_color">#4CAF50</color>
+    <color name="black">#FF000000</color>
+    <color name="demo_background">#F5F5F5</color>
+    <color name="demo_text">#9E9E9E</color>
+    <color name="primary_background">#FAFAFA</color>
+    <color name="primary_color">#FF6B35</color>
+    <color name="primary_color_dark">#E55100</color>
+    <color name="primary_text">#212121</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="secondary_background">#FFFFFF</color>
+    <color name="secondary_text">#757575</color>
+    <color name="star_color">#FFC107</color>
+    <color name="star_empty_color">#E0E0E0</color>
+    <color name="success_background">#E8F5E8</color>
+    <color name="success_text">#4CAF50</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="age_hint">Возраст</string>
+    <string name="app_name">RestaurantApp</string>
+    <string name="back_to_sign_in">Назад к входу</string>
+    <string name="choose_your_meal">Выберите ваше блюдо</string>
+    <string name="confirm_password_hint">Подтвердите пароль</string>
+    <string name="delivery_icon">Иконка доставки</string>
+    <string name="demo_credentials">Демо-данные: test@example.com / 123456\nИли любой email и пароль от 6 символов</string>
+    <string name="email_hint">Email</string>
+    <string name="feature_delivery_desc">Доставим ваш заказ в кратчайшие сроки</string>
+    <string name="feature_delivery_title">Доставка</string>
+    <string name="feature_menu_desc">Широкий выбор блюд на любой вкус</string>
+    <string name="feature_menu_title">Богатое меню</string>
+    <string name="feature_order_desc">Простое и удобное оформление заказа</string>
+    <string name="feature_order_title">Быстрый заказ</string>
+    <string name="female">Женский</string>
+    <string name="food_image">Изображение блюда</string>
+    <string name="gender_label">Пол</string>
+    <string name="get_started">Начать</string>
+    <string name="go_to_registration">Регистрация</string>
+    <string name="home_title">Главная</string>
+    <string name="logo_description">Логотип ресторана</string>
+    <string name="male">Мужской</string>
+    <string name="menu_icon">Иконка меню</string>
+    <string name="name_hint">Имя</string>
+    <string name="onboard_title">Добро пожаловать</string>
+    <string name="or">или</string>
+    <string name="order_icon">Иконка заказа</string>
+    <string name="password_hint">Пароль</string>
+    <string name="phone_hint">Телефон</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_in_title">Вход</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="sign_up_title">Регистрация</string>
+    <string name="welcome_subtitle">Откройте для себя изысканные блюда и незабываемые вкусы</string>
+    <string name="welcome_title">Добро пожаловать в наш ресторан!</string>
+    <string name="welcome_to_restaurant">Добро пожаловать в ресторан!</string>
+    <style name="Theme.RestaurantApp" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/primary_background</item>
+        <item name="colorOnBackground">@color/primary_text</item>
+        <item name="colorSurface">@color/secondary_background</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+    </style>
+    <style name="Theme.RestaurantApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

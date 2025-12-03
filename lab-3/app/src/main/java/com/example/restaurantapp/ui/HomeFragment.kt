@@ -1,0 +1,144 @@
+package com.example.restaurantapp.ui
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.restaurantapp.R
+import com.example.restaurantapp.adapter.RestaurantAdapter
+import com.example.restaurantapp.base.BaseFragment
+import com.example.restaurantapp.databinding.FragmentHomeBinding
+import com.example.restaurantapp.model.RestaurantItem
+
+class HomeFragment : BaseFragment() {
+
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var restaurantAdapter: RestaurantAdapter
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupRecyclerView()
+        setupWelcomeMessage()
+        loadRestaurantData()
+    }
+
+    private fun setupRecyclerView() {
+        restaurantAdapter = RestaurantAdapter()
+        
+        binding.recyclerView.apply {
+            adapter = restaurantAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+
+        restaurantAdapter.setOnItemClickListener { item ->
+            Toast.makeText(
+                requireContext(),
+                "Выбрано: ${item.name} - ₽${item.price}",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    private fun setupWelcomeMessage() {
+        val userEmail = arguments?.getString("user_email")
+        if (!userEmail.isNullOrEmpty()) {
+            binding.tvWelcome.text = "Добро пожаловать, $userEmail!"
+        }
+    }
+
+    private fun loadRestaurantData() {
+        val restaurantItems = listOf(
+            RestaurantItem(
+                id = 1,
+                name = "Борщ украинский",
+                description = "Традиционный борщ со свеклой, капустой и сметаной",
+                price = 320.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Первые блюда",
+                rating = 4.8f
+            ),
+            RestaurantItem(
+                id = 2,
+                name = "Стейк из говядины",
+                description = "Сочный стейк средней прожарки с картофелем и овощами",
+                price = 890.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Мясные блюда",
+                rating = 4.9f
+            ),
+            RestaurantItem(
+                id = 3,
+                name = "Паста Карбонара",
+                description = "Классическая итальянская паста с беконом и сыром",
+                price = 450.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Итальянская кухня",
+                rating = 4.7f
+            ),
+            RestaurantItem(
+                id = 4,
+                name = "Сёмга на гриле",
+                description = "Филе сёмги на гриле с лимоном и зеленью",
+                price = 650.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Рыбные блюда",
+                rating = 4.6f
+            ),
+            RestaurantItem(
+                id = 5,
+                name = "Цезарь с курицей",
+                description = "Свежий салат Цезарь с курицей-гриль и сухариками",
+                price = 380.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Салаты",
+                rating = 4.5f
+            ),
+            RestaurantItem(
+                id = 6,
+                name = "Тирамису",
+                description = "Нежный итальянский десерт с маскарпоне и кофе",
+                price = 290.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Десерты",
+                rating = 4.8f
+            ),
+            RestaurantItem(
+                id = 7,
+                name = "Том Ям",
+                description = "Острый тайский суп с креветками и грибами",
+                price = 420.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Азиатская кухня",
+                rating = 4.4f
+            ),
+            RestaurantItem(
+                id = 8,
+                name = "Пицца Маргарита",
+                description = "Классическая пицца с томатами, моцареллой и базиликом",
+                price = 520.0,
+                imageResource = R.drawable.ic_food_placeholder,
+                category = "Пицца",
+                rating = 4.6f
+            )
+        )
+
+        restaurantAdapter.submitList(restaurantItems)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

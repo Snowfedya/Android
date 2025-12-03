@@ -4,7 +4,7 @@
             "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/home/snow/.gradle/caches/8.13/transforms/4d939088e87fc476a20b0b8ecde7d4a0/transformed/material-1.10.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/home/snow/.gradle/caches/8.13/transforms/b8089bb0ba0f49a4f493ef763f633b53/transformed/material-1.10.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

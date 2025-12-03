@@ -4,7 +4,7 @@
             "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/snow/.gradle/caches/8.13/transforms/ef1a299dd48b9c48e7be9c6a0d16885f/transformed/appcompat-1.6.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/snow/.gradle/caches/8.13/transforms/96c23f2be0ab09b7c8a0c02ef6e242d3/transformed/appcompat-1.6.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/snow/.gradle/caches/8.13/transforms/4d939088e87fc476a20b0b8ecde7d4a0/transformed/material-1.10.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/snow/.gradle/caches/8.13/transforms/b8089bb0ba0f49a4f493ef763f633b53/transformed/material-1.10.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

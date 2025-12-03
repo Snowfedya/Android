@@ -4,7 +4,7 @@
             "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/home/snow/.gradle/caches/8.13/transforms/ef1a299dd48b9c48e7be9c6a0d16885f/transformed/appcompat-1.6.1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/home/snow/.gradle/caches/8.13/transforms/96c23f2be0ab09b7c8a0c02ef6e242d3/transformed/appcompat-1.6.1/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

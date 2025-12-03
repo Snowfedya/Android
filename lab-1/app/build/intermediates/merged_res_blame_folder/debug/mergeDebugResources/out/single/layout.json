@@ -12,10 +12,6 @@
         "source": "com.example.restaurantapp-main-38:/layout/activity_home.xml"
     },
     {
-        "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/activity_main.xml",
-        "source": "com.example.restaurantapp-main-38:/layout/activity_main.xml"
-    },
-    {
         "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/item_restaurant.xml",
         "source": "com.example.restaurantapp-main-38:/layout/item_restaurant.xml"
     },
