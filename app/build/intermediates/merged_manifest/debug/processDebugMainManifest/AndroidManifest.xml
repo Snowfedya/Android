@@ -25,10 +25,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.RestaurantApp" >
         <activity
-            android:name="com.example.restaurantapp.MainActivity"
+            android:name="com.example.restaurantapp.ui.OnboardActivity"
             android:exported="true"
             android:theme="@style/Theme.RestaurantApp.NoActionBar" >
             <intent-filter>
@@ -37,6 +36,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.restaurantapp.ui.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.restaurantapp.ui.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.restaurantapp.ui.HomeActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
@@ -52,13 +60,6 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
-
-        <uses-library
-            android:name="androidx.window.extensions"
-            android:required="false" />
-        <uses-library
-            android:name="androidx.window.sidecar"
-            android:required="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

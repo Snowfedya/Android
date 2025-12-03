@@ -1,9 +1,5 @@
 package com.example.restaurantapp.model
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
-@Parcelize
 data class RestaurantItem(
     val id: Int,
     val name: String,
@@ -12,4 +8,4 @@ data class RestaurantItem(
     val imageResource: Int,
     val category: String,
     val rating: Float
-) : Parcelable
+)

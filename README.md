@@ -1,125 +1,34 @@
-# RestaurantApp - Мобильное приложение ресторана
+# Lab 1: Introduction to Android Activities
 
-## Описание проекта
+## 📋 Requirements
+This laboratory work demonstrates the fundamental building blocks of an Android application using **Pure Activities**.
 
-RestaurantApp - это полнофункциональное Android-приложение ресторана, разработанное в соответствии с требованиями всех четырех лабораторных работ по разработке мобильных приложений.
+### ✅ Implemented Features
+1.  **OnboardActivity**: The entry point of the application (Launcher). Contains a "Get Started" button.
+2.  **SignInActivity**: Allows users to sign in. Validates input. Links to Sign Up.
+3.  **SignUpActivity**: Registration form with validation. Returns to Sign In upon success.
+4.  **HomeActivity**: Displays a list of restaurant items using `RecyclerView`.
 
-## Функциональность
+### 🚫 Restrictions (Strictly Observed)
+*   No `Fragments`.
+*   No `Navigation Component` (nav_graph).
+*   No `ViewModel` or `LiveData`.
+*   No `Room` database.
+*   No `Retrofit` networking.
+*   No `Parcelable` data passing (Basic Intent extras only).
+*   No `BaseActivity` inheritance.
 
-### 📱 Экраны приложения
-1. **OnboardFragment** - Стартовый экран с описанием функционала приложения
-2. **SignInFragment** - Экран входа в систему
-3. **SignUpFragment** - Экран регистрации нового пользователя
-4. **HomeFragment** - Главный экран с меню ресторана
+### 🛠️ Tech Stack
+*   **Language**: Kotlin
+*   **UI**: XML Layouts + ViewBinding (Minimal)
+*   **Navigation**: `Intent` + `startActivity()`
+*   **Lists**: `RecyclerView` + `ListAdapter`
 
-### ⚡ Основные возможности
+## 🚀 How to Run
+1.  Clone the repository.
+2.  Switch to `lab-1` branch.
+3.  Run `./gradlew assembleDebug` (requires JDK 17).
+4.  Install on device: `./gradlew installDebug`.
 
-- **Полный жизненный цикл** - Логирование всех состояний жизненного цикла Activity и Fragment
-- **Валидация данных** - Проверка корректности ввода email, пароля, возраста и других полей
-- **Передача данных** - Использование Safe Args для передачи данных между фрагментами
-- **Современная навигация** - Navigation Component с анимациями переходов
-- **View Binding** - Безопасный доступ к элементам интерфейса
-- **Material Design 3** - Современный дизайн в соответствии с гайдлайнами Google
-- **RecyclerView** - Список блюд ресторана с рейтингами и ценами
-
-### 🎨 Дизайн
-
-- Адаптивный дизайн для различных размеров экранов
-- Красивые карточки с тенями и скругленными углами
-- Анимации переходов между экранами
-- Цветовая схема в оранжевых тонах
-- Иконки Material Design
-
-## Технические детали
-
-### 🏗️ Архитектура
-- **MVVM** - Архитектурный паттерн с разделением логики и UI
-- **Single Activity** - Один MainActivity с фрагментами
-- **Navigation Component** - Современная система навигации Android
-- **View Binding** - Типобезопасный доступ к views
-
-### 📚 Технологии и библиотеки
-- **Kotlin** - Современный язык программирования для Android
-- **Navigation Component** - androidx.navigation
-- **Material Design Components** - com.google.android.material
-- **Fragment KTX** - androidx.fragment:fragment-ktx
-- **Lifecycle Components** - androidx.lifecycle
-
-### 🔧 Соответствие лабораторным работам
-
-#### Лабораторная работа №1
-✅ Реализованы все 4 экрана как отдельные Fragment  
-✅ Красивый дизайн с Material Design 3  
-✅ Адаптивные макеты  
-✅ Функциональные кнопки перехода  
-
-#### Лабораторная работа №2
-✅ Логирование жизненного цикла (BaseActivity и BaseFragment)  
-✅ Переходы между экранами  
-✅ Передача данных между фрагментами  
-✅ Класс User с Parcelable  
-✅ Валидация данных  
-
-#### Лабораторная работа №3
-✅ Преобразование Activity во Fragment  
-✅ MainActivity как хост всех фрагментов  
-✅ FragmentContainerView  
-✅ Навигация через FragmentManager (теперь Navigation Component)  
-
-#### Лабораторная работа №4
-✅ Navigation Component с navigation graph  
-✅ Safe Args для передачи данных  
-✅ View Binding во всех фрагментах  
-✅ NavController для навигации  
-
-## 🚀 Установка и запуск
-
-1. Откройте проект в Android Studio
-2. Синхронизируйте Gradle файлы
-3. Запустите приложение на эмуляторе или устройстве
-
-### Системные требования
-- **Min SDK**: 24 (Android 7.0)
-- **Target SDK**: 34 (Android 14)
-- **Compile SDK**: 34
-
-## 👤 Тестовые данные
-
-### Для входа в систему:
-- **Email**: test@example.com
-- **Пароль**: 123456
-
-Также принимается любой email с символом "@" и пароль от 6 символов.
-
-## 📱 Скриншоты
-
-Приложение содержит:
-- Стартовый экран с описанием возможностей
-- Форму входа с валидацией
-- Подробную форму регистрации
-- Главный экран с меню ресторана
-
-## 🔍 Особенности реализации
-
-### Валидация данных
-- Email: проверка на наличие "@" и "."
-- Пароль: минимум 6 символов, подтверждение пароля
-- Возраст: от 16 до 120 лет
-- Телефон: минимум 10 цифр
-- Имя: минимум 2 символа
-
-### Данные ресторана
-Приложение содержит фиктивные данные блюд с:
-- Названиями и описаниями
-- Ценами в рублях
-- Рейтингами (звездочки)
-- Категориями блюд
-- Placeholder изображениями
-
-## 👨‍💻 Автор
-
-Проект выполнен в соответствии с требованиями лабораторных работ по разработке мобильных приложений.
-
-## 📄 Лицензия
-
-Проект создан в образовательных целях.
+## 📱 Screenshots
+*(Add screenshots here after running on emulator)*

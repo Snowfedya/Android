@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.restaurantapp-mergeDebugResources-47:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
                     "source": "/home/snow/.gradle/caches/8.13/transforms/a37678cd14de8e501a73fb4790be137f/transformed/core-1.12.0/res/values-en-rXC/values-en-rXC.xml",

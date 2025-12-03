@@ -1,0 +1,14 @@
+{
+  "allowedTools": [
+    "Edit",
+    "Bash(./gradlew:*)",
+    "Bash(git checkout:*)",
+    "Bash(git commit:*)",
+    "Bash(adb:*)"
+  ],
+  "autoApprove": {
+    "readOperations": true,
+    "gitRead": true,
+    "gradleRead": true
+  }
+}

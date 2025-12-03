@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.restaurantapp-mergeDebugResources-47:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "/home/snow/.gradle/caches/8.13/transforms/ef1a299dd48b9c48e7be9c6a0d16885f/transformed/appcompat-1.6.1/res/values-large-v4/values-large-v4.xml",

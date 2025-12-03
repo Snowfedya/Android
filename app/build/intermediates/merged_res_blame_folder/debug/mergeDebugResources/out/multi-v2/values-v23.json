@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.restaurantapp-mergeDebugResources-47:/values-v23/values-v23.xml",
+            "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/home/snow/.gradle/caches/8.13/transforms/4d939088e87fc476a20b0b8ecde7d4a0/transformed/material-1.10.0/res/values-v23/values-v23.xml",

@@ -1,30 +1,26 @@
 [
     {
-        "merged": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-mergeDebugResources-48:/layout/fragment_sign_in.xml",
-        "source": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-main-51:/layout/fragment_sign_in.xml"
+        "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/activity_onboard.xml",
+        "source": "com.example.restaurantapp-main-38:/layout/activity_onboard.xml"
     },
     {
-        "merged": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-mergeDebugResources-48:/layout/activity_main.xml",
-        "source": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-main-51:/layout/activity_main.xml"
+        "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/activity_sign_in.xml",
+        "source": "com.example.restaurantapp-main-38:/layout/activity_sign_in.xml"
     },
     {
-        "merged": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-mergeDebugResources-48:/layout/fragment_sign_up.xml",
-        "source": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-main-51:/layout/fragment_sign_up.xml"
+        "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/activity_home.xml",
+        "source": "com.example.restaurantapp-main-38:/layout/activity_home.xml"
     },
     {
-        "merged": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-mergeDebugResources-48:/layout/item_restaurant.xml",
-        "source": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-main-51:/layout/item_restaurant.xml"
+        "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/activity_main.xml",
+        "source": "com.example.restaurantapp-main-38:/layout/activity_main.xml"
     },
     {
-        "merged": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-mergeDebugResources-48:/layout/fragment_onboard.xml",
-        "source": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-main-51:/layout/fragment_onboard.xml"
+        "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/item_restaurant.xml",
+        "source": "com.example.restaurantapp-main-38:/layout/item_restaurant.xml"
     },
     {
-        "merged": "com.example.restaurantapp-mergeDebugResources-48:/layout/activity_main.xml",
-        "source": "com.example.restaurantapp-main-51:/layout/activity_main.xml"
-    },
-    {
-        "merged": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-mergeDebugResources-48:/layout/fragment_home.xml",
-        "source": "/home/snow/.gradle/daemon/8.13/com.example.restaurantapp-main-51:/layout/fragment_home.xml"
+        "merged": "com.example.restaurantapp-mergeDebugResources-35:/layout/activity_sign_up.xml",
+        "source": "com.example.restaurantapp-main-38:/layout/activity_sign_up.xml"
     }
 ]

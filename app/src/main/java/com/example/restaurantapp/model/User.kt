@@ -1,9 +1,5 @@
 package com.example.restaurantapp.model
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
-@Parcelize
 data class User(
     val name: String = "",
     val email: String = "",
@@ -11,4 +7,4 @@ data class User(
     val age: Int = 0,
     val gender: String = "",
     val phone: String = ""
-) : Parcelable
+)
