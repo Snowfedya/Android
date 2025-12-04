@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_phone.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_phone.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_food_placeholder.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_food_placeholder.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_bg_price_tag.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/bg_price_tag.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/layout_activity_main.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/layout_fragment_onboard.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_onboard.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_bg_demo_info.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/bg_demo_info.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/anim_slide_in_left.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/anim/slide_in_left.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_restaurant_logo.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_restaurant_logo.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/layout_fragment_sign_up.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_sign_up.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_menu.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_menu.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_bg_category_chip.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/bg_category_chip.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_delivery.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_delivery.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_email.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_email.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/anim_slide_out_right.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/anim/slide_out_right.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_order.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_order.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_bg_image_placeholder.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/bg_image_placeholder.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_person.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_person.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/layout_fragment_home.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/layout_item_restaurant.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/layout/item_restaurant.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_cake.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_cake.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/xml_backup_rules.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/layout_fragment_sign_in.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_sign_in.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_bg_info_card.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/bg_info_card.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/anim_slide_out_left.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/anim_slide_in_right.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-debug-48:/drawable_ic_lock.xml.flat",
+        "source": "com.example.restaurantapp-main-50:/drawable/ic_lock.xml"
+    }
+]

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b5bf011-9b32-4096-90fb-3bdd25c3f6ed" name="Changes" comment="" />
+    <list default="true" id="6b5bf011-9b32-4096-90fb-3bdd25c3f6ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-1/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-1/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab-3/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab-3/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks.md" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,9 +59,10 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "lab-3",
+    "git-widget-placeholder": "lab-4",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/snow/mob/lab-2"
+    "last_opened_file_path": "/home/snow/mob/lab-4",
+    "settings.editor.selected.configurable": "templates.modelproviders.configurable"
   }
 }]]></component>
   <component name="RunManager">

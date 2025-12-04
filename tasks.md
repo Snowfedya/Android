@@ -7,7 +7,7 @@
 | **Lab 1** | ✅ Ready | `lab-1` | Pure Activities in `lab-1/`. |
 | **Lab 2** | ✅ Ready | `lab-2` | Lifecycle & Parcelable in `lab-2/`. |
 | **Lab 3** | ✅ Ready | `lab-3` | Fragments in `lab-3/`. |
-| **Lab 4** | ⏳ Pending | - | Navigation Component, ViewBinding. |
+| **Lab 4** | ✅ Ready | `lab-4` | Navigation Component, ViewBinding. |
 | **Lab 5** | ⏳ Pending | - | Retrofit, API integration. |
 | **Lab 6** | ⏳ Pending | - | DataStore, Settings. |
 | **Lab 7** | ⏳ Pending | - | Room Database. |

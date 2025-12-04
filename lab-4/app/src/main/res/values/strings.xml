@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RestaurantApp</string>
+    
+    <!-- Onboard Screen -->
+    <string name="onboard_title">Добро пожаловать</string>
+    <string name="welcome_title">Добро пожаловать в наш ресторан!</string>
+    <string name="welcome_subtitle">Откройте для себя изысканные блюда и незабываемые вкусы</string>
+    <string name="feature_menu_title">Богатое меню</string>
+    <string name="feature_menu_desc">Широкий выбор блюд на любой вкус</string>
+    <string name="feature_order_title">Быстрый заказ</string>
+    <string name="feature_order_desc">Простое и удобное оформление заказа</string>
+    <string name="feature_delivery_title">Доставка</string>
+    <string name="feature_delivery_desc">Доставим ваш заказ в кратчайшие сроки</string>
+    <string name="get_started">Начать</string>
+    
+    <!-- Sign In Screen -->
+    <string name="sign_in_title">Вход</string>
+    <string name="sign_in">Войти</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="or">или</string>
+    <string name="go_to_registration">Регистрация</string>
+    <string name="demo_credentials">Демо-данные: test@example.com / 123456\nИли любой email и пароль от 6 символов</string>
+    
+    <!-- Sign Up Screen -->
+    <string name="sign_up_title">Регистрация</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="name_hint">Имя</string>
+    <string name="confirm_password_hint">Подтвердите пароль</string>
+    <string name="age_hint">Возраст</string>
+    <string name="phone_hint">Телефон</string>
+    <string name="gender_label">Пол</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="back_to_sign_in">Назад к входу</string>
+    
+    <!-- Home Screen -->
+    <string name="home_title">Главная</string>
+    <string name="welcome_to_restaurant">Добро пожаловать в ресторан!</string>
+    <string name="choose_your_meal">Выберите ваше блюдо</string>
+    
+    <!-- Content Descriptions -->
+    <string name="logo_description">Логотип ресторана</string>
+    <string name="menu_icon">Иконка меню</string>
+    <string name="order_icon">Иконка заказа</string>
+    <string name="delivery_icon">Иконка доставки</string>
+    <string name="food_image">Изображение блюда</string>
+    
+</resources>

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.example.restaurantapp-mergeDebugResources-47:/layout/fragment_home.xml",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-mergeDebugResources-47:/layout/item_restaurant.xml",
+        "source": "com.example.restaurantapp-main-50:/layout/item_restaurant.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-mergeDebugResources-47:/layout/fragment_sign_up.xml",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_sign_up.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-mergeDebugResources-47:/layout/activity_main.xml",
+        "source": "com.example.restaurantapp-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-mergeDebugResources-47:/layout/fragment_onboard.xml",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_onboard.xml"
+    },
+    {
+        "merged": "com.example.restaurantapp-mergeDebugResources-47:/layout/fragment_sign_in.xml",
+        "source": "com.example.restaurantapp-main-50:/layout/fragment_sign_in.xml"
+    }
+]
