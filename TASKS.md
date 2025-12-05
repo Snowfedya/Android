@@ -6,7 +6,7 @@
 | **Infrastructure** | ✅ Done | Setting up AI-ready repo structure. |
 | **Lab 1-3** | ✅ Done | Initial labs. |
 | **Lab 4** | ✅ Done | Jetpack Navigation. |
-| **Lab 5** | ⏳ Pending | Networking. |
+| **Lab 5** | ✅ Done | Networking. |
 | **Lab 6** | ⏳ Pending | Data Storage. |
 | **Lab 7** | ⏳ Pending | Database. |
 

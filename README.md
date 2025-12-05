@@ -12,7 +12,7 @@ The project uses a **cumulative directory structure**. Each branch contains the 
 | **Lab 2** | **Lifecycle & Data**<br>BaseActivity, Parcelable, Result API. | [`lab-2/`](./lab-2) | `lab-2` | ✅ Completed |
 | **Lab 3** | **Fragments**<br>Single Activity, FragmentManager. | [`lab-3/`](./lab-3) | `lab-3` | ✅ Completed |
 | **Lab 4** | **Jetpack Navigation**<br>NavController, ViewBinding. | [`lab-4/`](./lab-4) | `lab-4` | ✅ Completed |
-| **Lab 5** | **Networking**<br>Retrofit, API, Coroutines. | [`lab-5/`](./lab-5) | `lab-5` | ⏳ Pending |
+| **Lab 5** | **Networking**<br>Retrofit, API, Coroutines. | [`lab-5/`](./lab-5) | `lab-5` | ✅ Completed |
 | **Lab 6** | **Data Storage**<br>DataStore, Files, Settings. | [`lab-6/`](./lab-6) | `lab-6` | ⏳ Pending |
 | **Lab 7** | **Database**<br>Room, Flow, Offline-first. | [`lab-7/`](./lab-7) | `lab-7` | ⏳ Pending |
 
