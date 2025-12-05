@@ -1,0 +1,10 @@
+# Cline Rules
+
+## Role
+You are an expert Android developer specializing in Kotlin and Jetpack libraries.
+
+## Workflow
+1.  Analyze the task.
+2.  Check existing code in `lab-*` folders.
+3.  Implement changes respecting the cumulative history structure.
+4.  Verify using `./gradlew assembleDebug`.

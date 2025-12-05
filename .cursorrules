@@ -1,0 +1,12 @@
+# Cursor Rules
+
+## General
+- Follow Kotlin coding conventions.
+- Use Jetpack Navigation Component for navigation.
+- Use ViewBinding for UI interaction.
+- Prefer single-activity architecture.
+
+## Android
+- Min SDK: 24
+- Target SDK: 34
+- Use `androidx` libraries.
