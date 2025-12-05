@@ -3,7 +3,7 @@
 ## 📊 Progress Overview
 | Milestone | Status | Description |
 |---|---|---|
-| **Infrastructure** | 🏗️ In Progress | Setting up AI-ready repo structure. |
+| **Infrastructure** | ✅ Done | Setting up AI-ready repo structure. |
 | **Lab 1-3** | ✅ Done | Initial labs. |
 | **Lab 4** | ✅ Done | Jetpack Navigation. |
 | **Lab 5** | ⏳ Pending | Networking. |
