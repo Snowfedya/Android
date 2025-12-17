@@ -4,43 +4,57 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.restaurantapp.R
 import com.example.restaurantapp.adapter.RestaurantAdapter
 import com.example.restaurantapp.base.BaseFragment
-import com.example.restaurantapp.databinding.FragmentHomeBinding
 import com.example.restaurantapp.model.RestaurantItem
 
 class HomeFragment : BaseFragment() {
 
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var tvWelcome: TextView
+    private lateinit var recyclerView: RecyclerView
     private lateinit var restaurantAdapter: RestaurantAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        initViews(view)
         setupRecyclerView()
         setupWelcomeMessage()
-        loadRestaurantData()
+    }
+
+    private fun initViews(view: View) {
+        tvWelcome = view.findViewById(R.id.tvWelcome)
+        recyclerView = view.findViewById(R.id.recyclerView)
     }
 
     private fun setupRecyclerView() {
         restaurantAdapter = RestaurantAdapter()
         
-        binding.recyclerView.apply {
+        recyclerView.apply {
             adapter = restaurantAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
+
+        // Mock Data for Lab 3
+        val mockData = listOf(
+            RestaurantItem(1, "Burger King", "Fast Food", 350.0, R.drawable.ic_launcher_background, "Fast Food", 4.5f),
+            RestaurantItem(2, "McDonalds", "Fast Food", 300.0, R.drawable.ic_launcher_background, "Fast Food", 4.2f),
+            RestaurantItem(3, "KFC", "Chicken", 280.0, R.drawable.ic_launcher_background, "Fast Food", 4.0f)
+        )
+        restaurantAdapter.submitList(mockData)
 
         restaurantAdapter.setOnItemClickListener { item ->
             Toast.makeText(
@@ -52,21 +66,8 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setupWelcomeMessage() {
-        val userEmail = arguments?.getString("user_email")
+        val userEmail = arguments?.getString("email")
         if (!userEmail.isNullOrEmpty()) {
-            binding.tvWelcome.text = "Добро пожаловать, $userEmail!"
-        }
-    }
-
-    private fun loadRestaurantData() {
-        val restaurantItems = listOf(
-            RestaurantItem(
-                id = 1,
-                name = "Борщ украинский",
-                description = "Традиционный борщ со свеклой, капустой и сметаной",
-                price = 320.0,
-                imageResource = R.drawable.ic_food_placeholder,
-                category = "Первые блюда",
                 rating = 4.8f
             ),
             RestaurantItem(

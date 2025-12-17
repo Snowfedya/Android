@@ -1,56 +1,82 @@
+```kotlin
 package com.example.restaurantapp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.restaurantapp.databinding.ActivitySignUpBinding
+import com.example.restaurantapp.R
 
 class SignUpActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySignUpBinding
+    private lateinit var etName: EditText
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var etConfirmPassword: EditText
+    private lateinit var etAge: EditText
+    private lateinit var etPhone: EditText
+    private lateinit var rgGender: RadioGroup
+    private lateinit var btnSignUp: Button
+    private lateinit var btnBackToSignIn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_sign_up)
 
+        initViews()
         setupClickListeners()
     }
 
+    private fun initViews() {
+        etName = findViewById(R.id.etName)
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        etConfirmPassword = findViewById(R.id.etConfirmPassword)
+        etAge = findViewById(R.id.etAge)
+        etPhone = findViewById(R.id.etPhone)
+        rgGender = findViewById(R.id.rgGender)
+        btnSignUp = findViewById(R.id.btnSignUp)
+        btnBackToSignIn = findViewById(R.id.btnBackToSignIn)
+    }
+
     private fun setupClickListeners() {
-        binding.btnSignUp.setOnClickListener {
+        btnSignUp.setOnClickListener {
             performSignUp()
         }
 
-        binding.btnBackToSignIn.setOnClickListener {
-            finish() // Go back to SignIn
+        btnBackToSignIn.setOnClickListener {
+            finish()
         }
     }
 
     private fun performSignUp() {
-        val name = binding.etName.text.toString().trim()
-        val email = binding.etEmail.text.toString().trim()
-        val password = binding.etPassword.text.toString().trim()
-        val confirmPassword = binding.etConfirmPassword.text.toString().trim()
-        val age = binding.etAge.text.toString().trim()
-        val phone = binding.etPhone.text.toString().trim()
+        val name = etName.text.toString().trim()
+        val email = etEmail.text.toString().trim()
+        val password = etPassword.text.toString().trim()
+        val confirmPassword = etConfirmPassword.text.toString().trim()
+        val age = etAge.text.toString().trim()
+        val phone = etPhone.text.toString().trim()
         
-        val genderId = binding.rgGender.checkedRadioButtonId
+        val genderId = rgGender.checkedRadioButtonId
         val gender = if (genderId != -1) "Selected" else ""
 
         if (validateInput(name, email, password, confirmPassword, age, phone, gender)) {
             showSuccess("Регистрация успешна!")
             
-            // In Lab 1 (No startActivityForResult), we can just start SignInActivity again 
-            // or finish() and expect user to type. 
-            // Better UX: Start SignInActivity with data.
+            // LAB 1: Возвращаем данные через Intent extra (простой способ)
+            val resultIntent = Intent().apply {
+                putExtra("registered_email", email)
+            }
+            // В Lab 1 мы просто запускаем SignInActivity, так как startActivityForResult еще не требовался
+            // Но чтобы передать данные, лучше использовать startActivity с флагом или просто finish() если нас вызвали
+            // По заданию Lab 1: "переход к следующим/предыдущим экранам".
+            // Сделаем переход на SignIn
             val intent = Intent(this, SignInActivity::class.java)
             intent.putExtra("registered_email", email)
-            // Clear top to avoid stack pile up
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
-            finish()
         }
     }
 
@@ -116,3 +142,4 @@ class SignUpActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
+```

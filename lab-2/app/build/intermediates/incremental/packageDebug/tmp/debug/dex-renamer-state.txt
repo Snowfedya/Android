@@ -1,4 +1,4 @@
-#Wed Dec 03 17:51:57 MSK 2025
+#Sat Dec 13 19:10:03 MSK 2025
 base.0=/home/snow/mob/lab-2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/home/snow/mob/lab-2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/home/snow/mob/lab-2/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex

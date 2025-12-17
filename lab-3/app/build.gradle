@@ -34,9 +34,11 @@ android {
         jvmTarget = '1.8'
     }
     
-    buildFeatures {
-        viewBinding true
-    }
+    
+    // View Binding removed for Lab 3 (introduced in Lab 4)
+    // buildFeatures {
+    //     viewBinding true
+    // }
 }
 
 dependencies {

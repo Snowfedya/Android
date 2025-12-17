@@ -2,43 +2,66 @@ package com.example.restaurantapp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioGroup
 import android.widget.Toast
+import com.example.restaurantapp.R
 import com.example.restaurantapp.base.BaseActivity
-import com.example.restaurantapp.databinding.ActivitySignUpBinding
 import com.example.restaurantapp.model.User
 
 class SignUpActivity : BaseActivity() {
 
-    private lateinit var binding: ActivitySignUpBinding
+    private lateinit var etName: EditText
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var etConfirmPassword: EditText
+    private lateinit var etAge: EditText
+    private lateinit var etPhone: EditText
+    private lateinit var rgGender: RadioGroup
+    private lateinit var btnSignUp: Button
+    private lateinit var btnBackToSignIn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_sign_up)
 
+        initViews()
         setupClickListeners()
     }
 
+    private fun initViews() {
+        etName = findViewById(R.id.etName)
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        etConfirmPassword = findViewById(R.id.etConfirmPassword)
+        etAge = findViewById(R.id.etAge)
+        etPhone = findViewById(R.id.etPhone)
+        rgGender = findViewById(R.id.rgGender)
+        btnSignUp = findViewById(R.id.btnSignUp)
+        btnBackToSignIn = findViewById(R.id.btnBackToSignIn)
+    }
+
     private fun setupClickListeners() {
-        binding.btnSignUp.setOnClickListener {
+        btnSignUp.setOnClickListener {
             performSignUp()
         }
 
-        binding.btnBackToSignIn.setOnClickListener {
+        btnBackToSignIn.setOnClickListener {
             setResult(RESULT_CANCELED)
             finish()
         }
     }
 
     private fun performSignUp() {
-        val name = binding.etName.text.toString().trim()
-        val email = binding.etEmail.text.toString().trim()
-        val password = binding.etPassword.text.toString().trim()
-        val confirmPassword = binding.etConfirmPassword.text.toString().trim()
-        val age = binding.etAge.text.toString().trim()
-        val phone = binding.etPhone.text.toString().trim()
+        val name = etName.text.toString().trim()
+        val email = etEmail.text.toString().trim()
+        val password = etPassword.text.toString().trim()
+        val confirmPassword = etConfirmPassword.text.toString().trim()
+        val age = etAge.text.toString().trim()
+        val phone = etPhone.text.toString().trim()
         
-        val genderId = binding.rgGender.checkedRadioButtonId
+        val genderId = rgGender.checkedRadioButtonId
         val gender = if (genderId != -1) "Selected" else ""
 
         if (validateInput(name, email, password, confirmPassword, age, phone, gender)) {

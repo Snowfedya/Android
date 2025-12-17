@@ -1,16 +1,19 @@
 package com.example.restaurantapp
 
 import android.os.Bundle
-import com.example.restaurantapp.base.BaseActivity
-import com.example.restaurantapp.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.example.restaurantapp.ui.OnboardFragment
 
-class MainActivity : BaseActivity() {
-
-    private lateinit var binding: ActivityMainBinding
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, OnboardFragment())
+                .commit()
+        }
     }
 }

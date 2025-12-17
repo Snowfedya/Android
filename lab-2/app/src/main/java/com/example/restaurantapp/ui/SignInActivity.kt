@@ -2,52 +2,80 @@ package com.example.restaurantapp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
+import com.example.restaurantapp.R
 import com.example.restaurantapp.base.BaseActivity
-import com.example.restaurantapp.databinding.ActivitySignInBinding
 import com.example.restaurantapp.model.User
 
 class SignInActivity : BaseActivity() {
-
-    private lateinit var binding: ActivitySignInBinding
 
     // Фиктивные данные для входа
     private val validEmail = "test@example.com"
     private val validPassword = "123456"
 
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var btnSignIn: Button
+    private lateinit var btnSignUp: Button
+
     companion object {
-        const val REQUEST_CODE_SIGN_UP = 1001
         const val KEY_USER_DATA = "user_data"
+        const val REQUEST_CODE_SIGN_UP = 1001
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_sign_in)
 
+        initViews()
         setupClickListeners()
     }
 
+    private fun initViews() {
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        btnSignIn = findViewById(R.id.btnSignIn)
+        btnSignUp = findViewById(R.id.btnGoToSignUp) // Corrected ID from instruction
+    }
+
     private fun setupClickListeners() {
-        binding.btnSignIn.setOnClickListener {
+        btnSignIn.setOnClickListener {
             performSignIn()
         }
 
-        binding.btnGoToSignUp.setOnClickListener {
+        btnSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
-            // LAB 2: Используем startActivityForResult (Legacy)
+            // LAB 2: Используем startActivityForResult для получения данных обратно
             startActivityForResult(intent, REQUEST_CODE_SIGN_UP)
         }
     }
 
+    // LAB 2: Обработка результата из SignUpActivity
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE_SIGN_UP && resultCode == RESULT_OK) {
+            // Получаем объект User (Parcelable)
+            val user = data?.getParcelableExtra<User>(KEY_USER_DATA)
+            if (user != null) {
+                etEmail.setText(user.email)
+                Toast.makeText(this, "Registration successful for ${user.name}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
     private fun performSignIn() {
-        val email = binding.etEmail.text.toString().trim()
-        val password = binding.etPassword.text.toString().trim()
+        val email = etEmail.text.toString().trim()
+        val password = etPassword.text.toString().trim()
 
         if (validateInput(email, password)) {
-            val intent = Intent(this, HomeActivity::class.java)
-            intent.putExtra("email", email)
-            startActivity(intent)
+            if (email == validEmail && password == validPassword) {
+                navigateToHome()
+            } else {
+                Toast.makeText(this, "Demo: Signing in...", Toast.LENGTH_SHORT).show()
+                navigateToHome()
+            }
         }
     }
 
@@ -61,19 +89,6 @@ class SignInActivity : BaseActivity() {
                 showError("Пожалуйста, введите пароль")
                 false
             }
-            email == validEmail && password == validPassword -> {
-                true
-            }
-            email.contains("@") && password.length >= 6 -> {
-                true
-            }
-            else -> {
-                showError("Неверный email или пароль")
-                false
-            }
-        }
-    }
-
     // LAB 2: Получаем результат из SignUpActivity
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

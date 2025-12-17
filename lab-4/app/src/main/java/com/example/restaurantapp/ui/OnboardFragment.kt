@@ -34,7 +34,6 @@ class OnboardFragment : BaseFragment() {
             findNavController().navigate(R.id.action_onboardFragment_to_signInFragment)
         }
     }
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

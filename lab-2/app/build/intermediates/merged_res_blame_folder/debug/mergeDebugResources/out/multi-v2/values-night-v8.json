@@ -4,7 +4,7 @@
             "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/snow/.gradle/caches/8.13/transforms/96c23f2be0ab09b7c8a0c02ef6e242d3/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "source": "/home/snow/.gradle/caches/8.13/transforms/f72a160eab4afc2d265e316e09df3b1d/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/snow/.gradle/caches/8.13/transforms/b8089bb0ba0f49a4f493ef763f633b53/transformed/material-1.10.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/home/snow/.gradle/caches/8.13/transforms/96dd1cc452fc33141410bcb623f7dba1/transformed/material-1.10.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -4,7 +4,7 @@
             "outputFile": "com.example.restaurantapp-mergeDebugResources-34:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "/home/snow/.gradle/caches/8.13/transforms/96c23f2be0ab09b7c8a0c02ef6e242d3/transformed/appcompat-1.6.1/res/values-v25/values-v25.xml",
+                    "source": "/home/snow/.gradle/caches/8.13/transforms/f72a160eab4afc2d265e316e09df3b1d/transformed/appcompat-1.6.1/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

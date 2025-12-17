@@ -1,33 +1,40 @@
+```kotlin
 package com.example.restaurantapp.ui
 
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.restaurantapp.R
 import com.example.restaurantapp.adapter.RestaurantAdapter
 import com.example.restaurantapp.base.BaseActivity
-import com.example.restaurantapp.databinding.ActivityHomeBinding
 import com.example.restaurantapp.model.RestaurantItem
 
 class HomeActivity : BaseActivity() {
 
-    private lateinit var binding: ActivityHomeBinding
+    private lateinit var tvWelcome: TextView
+    private lateinit var recyclerView: RecyclerView
     private lateinit var restaurantAdapter: RestaurantAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_home)
 
+        initViews()
         setupRecyclerView()
         setupWelcomeMessage()
-        loadRestaurantData()
+    }
+
+    private fun initViews() {
+        tvWelcome = findViewById(R.id.tvWelcome)
+        recyclerView = findViewById(R.id.recyclerView)
     }
 
     private fun setupRecyclerView() {
         restaurantAdapter = RestaurantAdapter()
         
-        binding.recyclerView.apply {
+        recyclerView.apply {
             adapter = restaurantAdapter
             layoutManager = LinearLayoutManager(this@HomeActivity)
         }
@@ -39,15 +46,24 @@ class HomeActivity : BaseActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
+
+        // Mock Data for Lab 2
+        val mockData = listOf(
+            RestaurantItem(1, "Burger King", "Fast Food", 350.0, R.drawable.ic_food_placeholder, "Fast Food", 4.5f),
+            RestaurantItem(2, "McDonalds", "Fast Food", 300.0, R.drawable.ic_food_placeholder, "Fast Food", 4.2f),
+            RestaurantItem(3, "KFC", "Chicken", 280.0, R.drawable.ic_food_placeholder, "Fast Food", 4.0f)
+        )
+        restaurantAdapter.submitList(mockData)
     }
 
     private fun setupWelcomeMessage() {
-        val userEmail = intent.getStringExtra("email")
-        if (!userEmail.isNullOrEmpty()) {
-            binding.tvWelcome.text = "Добро пожаловать, $userEmail!"
-        }
+        // Lab 1/2: Getting data from Intent
+        val userEmail = intent.getStringExtra("email") ?: "User"
+        tvWelcome.text = "Welcome, $userEmail!"
     }
 
+    // The original loadRestaurantData method is no longer called and its content is replaced by mock data in setupRecyclerView.
+    // Keeping it here for reference if needed, but it's effectively unused with the new setup.
     private fun loadRestaurantData() {
         val restaurantItems = listOf(
             RestaurantItem(

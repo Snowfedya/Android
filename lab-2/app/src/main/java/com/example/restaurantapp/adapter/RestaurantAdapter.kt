@@ -1,53 +1,48 @@
+```kotlin
 package com.example.restaurantapp.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.restaurantapp.databinding.ItemRestaurantBinding
+import com.example.restaurantapp.R
 import com.example.restaurantapp.model.RestaurantItem
 
-class RestaurantAdapter : ListAdapter<RestaurantItem, RestaurantAdapter.RestaurantViewHolder>(DiffCallback) {
+class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
 
-    private var onItemClickListener: ((RestaurantItem) -> Unit)? = null
+    private var items: List<RestaurantItem> = emptyList()
+    private var onItemClick: ((RestaurantItem) -> Unit)? = null
+
+    fun submitList(newItems: List<RestaurantItem>) {
+        items = newItems
+        notifyDataSetChanged()
+    }
 
     fun setOnItemClickListener(listener: (RestaurantItem) -> Unit) {
-        onItemClickListener = listener
+        onItemClick = listener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
-        val binding = ItemRestaurantBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        )
-        return RestaurantViewHolder(binding)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_restaurant, parent, false)
+        return RestaurantViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
-        val currentItem = getItem(position)
-        holder.bind(currentItem)
+        holder.bind(items[position])
     }
 
-    inner class RestaurantViewHolder(private val binding: ItemRestaurantBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    override fun getItemCount(): Int = items.size
 
-        init {
-            binding.root.setOnClickListener {
-                val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-                    val item = getItem(position)
-                    onItemClickListener?.invoke(item)
-                }
-            }
-        }
+    inner class RestaurantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val tvName: TextView = itemView.findViewById(R.id.tvName)
+        private val tvCategory: TextView = itemView.findViewById(R.id.tvCategory)
+        private val tvPrice: TextView = itemView.findViewById(R.id.tvPrice)
+        private val ivImage: ImageView = itemView.findViewById(R.id.ivImage)
 
         fun bind(item: RestaurantItem) {
-            binding.apply {
-                tvName.text = item.name
-                tvDescription.text = item.description
-                tvPrice.text = "₽${item.price}"
                 tvCategory.text = item.category
                 ratingBar.rating = item.rating
                 tvRating.text = item.rating.toString()

@@ -1,33 +1,39 @@
 package com.example.restaurantapp.ui
 
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.restaurantapp.R
 import com.example.restaurantapp.adapter.RestaurantAdapter
-import com.example.restaurantapp.databinding.ActivityHomeBinding
 import com.example.restaurantapp.model.RestaurantItem
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHomeBinding
+    private lateinit var tvWelcome: TextView
+    private lateinit var recyclerView: RecyclerView
     private lateinit var restaurantAdapter: RestaurantAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_home)
 
+        initViews()
         setupRecyclerView()
         setupWelcomeMessage()
-        loadRestaurantData()
+    }
+
+    private fun initViews() {
+        tvWelcome = findViewById(R.id.tvWelcome)
+        recyclerView = findViewById(R.id.recyclerView)
     }
 
     private fun setupRecyclerView() {
         restaurantAdapter = RestaurantAdapter()
         
-        binding.recyclerView.apply {
+        recyclerView.apply {
             adapter = restaurantAdapter
             layoutManager = LinearLayoutManager(this@HomeActivity)
         }
@@ -39,17 +45,6 @@ class HomeActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
-    }
-
-    private fun setupWelcomeMessage() {
-        val userEmail = intent.getStringExtra("email")
-        if (!userEmail.isNullOrEmpty()) {
-            binding.tvWelcome.text = "Добро пожаловать, $userEmail!"
-        }
-    }
-
-    private fun loadRestaurantData() {
-        val restaurantItems = listOf(
             RestaurantItem(
                 id = 1,
                 name = "Борщ украинский",

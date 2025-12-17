@@ -4,66 +4,79 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
+import com.example.restaurantapp.R
 import com.example.restaurantapp.base.BaseFragment
-import com.example.restaurantapp.databinding.FragmentSignUpBinding
-import com.example.restaurantapp.model.User
 
 class SignUpFragment : BaseFragment() {
 
-    private var _binding: FragmentSignUpBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var etName: EditText
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var etConfirmPassword: EditText
+    private lateinit var etAge: EditText
+    private lateinit var etPhone: EditText
+    private lateinit var rgGender: RadioGroup
+    private lateinit var btnSignUp: Button
+    private lateinit var btnBackToSignIn: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        return inflater.inflate(R.layout.fragment_sign_up, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        initViews(view)
         setupClickListeners()
     }
 
+    private fun initViews(view: View) {
+        etName = view.findViewById(R.id.etName)
+        etEmail = view.findViewById(R.id.etEmail)
+        etPassword = view.findViewById(R.id.etPassword)
+        etConfirmPassword = view.findViewById(R.id.etConfirmPassword)
+        etAge = view.findViewById(R.id.etAge)
+        etPhone = view.findViewById(R.id.etPhone)
+        rgGender = view.findViewById(R.id.rgGender)
+        btnSignUp = view.findViewById(R.id.btnSignUp)
+        btnBackToSignIn = view.findViewById(R.id.btnBackToSignIn)
+    }
+
     private fun setupClickListeners() {
-        binding.btnSignUp.setOnClickListener {
+        btnSignUp.setOnClickListener {
             performSignUp()
         }
 
-        binding.btnBackToSignIn.setOnClickListener {
+        btnBackToSignIn.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
     }
 
     private fun performSignUp() {
-        val name = binding.etName.text.toString().trim()
-        val email = binding.etEmail.text.toString().trim()
-        val password = binding.etPassword.text.toString().trim()
-        val confirmPassword = binding.etConfirmPassword.text.toString().trim()
-        val age = binding.etAge.text.toString().trim()
-        val phone = binding.etPhone.text.toString().trim()
+        val name = etName.text.toString().trim()
+        val email = etEmail.text.toString().trim()
+        val password = etPassword.text.toString().trim()
+        val confirmPassword = etConfirmPassword.text.toString().trim()
+        val age = etAge.text.toString().trim()
+        val phone = etPhone.text.toString().trim()
         
-        val genderId = binding.rgGender.checkedRadioButtonId
+        val genderId = rgGender.checkedRadioButtonId
         val gender = if (genderId != -1) "Selected" else ""
 
         if (validateInput(name, email, password, confirmPassword, age, phone, gender)) {
-            val user = User(
-                name = name,
-                email = email,
-                password = password,
-                age = age.toIntOrNull() ?: 0,
-                gender = gender,
-                phone = phone
-            )
-
-            // LAB 3: Return result using setFragmentResult
-            setFragmentResult("request_key_signup", bundleOf("user_data" to user))
             
+            // LAB 3: Use Fragment Result API to pass data back
+            setFragmentResult("requestKey", bundleOf("email" to email))
             parentFragmentManager.popBackStack()
         }
     }
@@ -124,10 +137,5 @@ class SignUpFragment : BaseFragment() {
 
     private fun showError(message: String) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
